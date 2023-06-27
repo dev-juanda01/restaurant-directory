@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+<!-- block title -->
+
+{% block title %} Search {% endblock title %}
+<!-- Block content for the search restaurant -->
+{% block content %}
+<div class="container search">
+  <!-- Validation to render components -->
+  {% if restaurant and restaurant != 1 %}
+  <div class="col card-search">
+    <div class="card">
+      <img
+        src="{{restaurant.image}}"
+        class="card-img-top"
+        alt="{{restaurant.name}}"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{restaurant.name}}</h5>
+        <p>{{restaurant.direction}}</p>
+        <p class="card-text">{{restaurant.description}}</p>
+      </div>
+    </div>
+  </div>
+  {% elif restaurant == 1 %}
+  <h2>Busquemos un restaurante</h2>
+  {% else %}
+  <h2>No encontrado</h2>
+  {% endif %}
+</div>
+<!-- End block -->
+{% endblock content %}

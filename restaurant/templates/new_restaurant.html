@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+<!-- static files -->
+{% load static %}
+<!-- Title of main page -->
+{% block title %} New {% endblock title %}
+<!-- Content block to index -->
+{% block content %}
+<div class="container new">
+  <form method="POST" class="form form-new">
+    {% csrf_token %}
+    <!-- Token for security -->
+    {{restaurant_form.as_p}}
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
+{% endblock content %}
+<!-- Block Script for the form -->
+
+{% block script %}
+<script src="{% static 'js/form_new.js' %}"></script>
+{% endblock script %}

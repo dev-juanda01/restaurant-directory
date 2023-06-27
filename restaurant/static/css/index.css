@@ -1,0 +1,102 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.header {
+  height: 30rem;
+  background-image: url("../img/bg-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar {
+  background-color: transparent !important;
+}
+
+.navbar-brand {
+  background-color: #ff5e2c;
+  width: 3.7rem;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0.8rem;
+}
+
+.content-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-header p {
+  width: 70%;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1.2rem;
+}
+
+.main-nav {
+  font-size: 1.2rem;
+}
+
+.main-nav a {
+  color: #4a4a4a;
+}
+
+.main-nav a:hover {
+  color: #000;
+}
+
+.list-restaurants {
+  margin: 1rem 0;
+}
+
+.search-form {
+  width: 55%;
+}
+
+.search-form-input {
+  border: none;
+  border-radius: 0.5rem;
+  width: 80%;
+  height: 2.8rem;
+  padding-left: 0.8rem;
+}
+
+.search-form-btn {
+  border: none;
+  border-radius: 0.5rem;
+  height: 2.8rem;
+  background-color: #dfdfe0;
+}
+
+.search-form-input::placeholder {
+  font-size: 1rem;
+}
+
+.search {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.card-search {
+  max-width: 50%;
+}
+
+.new {
+  display: flex;
+  justify-content: center;
+}
+
+.form-new {
+  width: 70%;
+  margin: 3rem 0;
+}

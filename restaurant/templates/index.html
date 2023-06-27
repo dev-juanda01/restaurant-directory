@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+<!-- Title of main page -->
+{% block title %} Restaurants App {% endblock title %}
+<!-- Content block to index -->
+{% block content %}
+<div class="container">
+  <h2>Restaurantes</h2>
+  <!-- Blck if for validate expression (len restaurants) -->
+  {% if restaurants|length <= 0 %}
+  <h2>Sin datos</h2>
+  {% else %}
+  <section class="list-restaurants">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      {% for restaurant in restaurants %}
+      <div class="col">
+        <div class="card">
+          <img
+            src="{{restaurant.image}}"
+            class="card-img-top"
+            alt="{{restaurant.name}}"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{restaurant.name}}</h5>
+            <p>{{restaurant.direction}}</p>
+            <p class="card-text">{{restaurant.description}}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</div>
+<!-- End block -->
+{% endblock content %}
